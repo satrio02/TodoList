@@ -26,21 +26,331 @@ public class Register extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        homeIcon2 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        welcomeTitle2 = new javax.swing.JLabel();
+        TitleLoginInterface = new javax.swing.JLabel();
+        TitleLoginInterface1 = new javax.swing.JLabel();
+        IconUsername = new javax.swing.JLabel();
+        userNameTextField = new javax.swing.JTextField();
+        IconEmail = new javax.swing.JLabel();
+        emailTextField = new javax.swing.JTextField();
+        IconPassword = new javax.swing.JLabel();
+        passwordTextField = new javax.swing.JTextField();
+        signUpBtn = new javax.swing.JToggleButton();
+        signUpText = new javax.swing.JLabel();
+        loginBtn = new javax.swing.JLabel();
+        footerTitle = new javax.swing.JLabel();
+        facebookIcon = new javax.swing.JLabel();
+        twitterIcon = new javax.swing.JLabel();
+        instagramIcon = new javax.swing.JLabel();
+        youtubeIcon = new javax.swing.JLabel();
+        linkedinIcon = new javax.swing.JLabel();
+        CopyrightText = new javax.swing.JLabel();
+        CopyrightIcon = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel4.setBackground(new java.awt.Color(0, 0, 0));
+
+        homeIcon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/list.png"))); // NOI18N
+        homeIcon2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("To");
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Do");
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("List");
+
+        welcomeTitle2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        welcomeTitle2.setForeground(new java.awt.Color(255, 255, 255));
+        welcomeTitle2.setText("Welcome!");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addComponent(homeIcon2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(welcomeTitle2)
+                        .addGap(50, 50, 50))))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jLabel9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(welcomeTitle2)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(jLabel10)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel11))))
+                    .addComponent(homeIcon2))
+                .addContainerGap(30, Short.MAX_VALUE))
+        );
+
+        TitleLoginInterface.setFont(new java.awt.Font("Tahoma", 3, 36)); // NOI18N
+        TitleLoginInterface.setText("Would You Like to");
+
+        TitleLoginInterface1.setFont(new java.awt.Font("Tahoma", 3, 36)); // NOI18N
+        TitleLoginInterface1.setText("Fill This Form First ?");
+
+        IconUsername.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/identity.png"))); // NOI18N
+
+        userNameTextField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                userNameTextFieldFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                userNameTextFieldFocusLost(evt);
+            }
+        });
+
+        IconEmail.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/email.png"))); // NOI18N
+
+        emailTextField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                emailTextFieldFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                emailTextFieldFocusLost(evt);
+            }
+        });
+
+        IconPassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/password.png"))); // NOI18N
+
+        passwordTextField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                passwordTextFieldFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                passwordTextFieldFocusLost(evt);
+            }
+        });
+
+        signUpBtn.setBackground(new java.awt.Color(0, 0, 0));
+        signUpBtn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        signUpBtn.setForeground(new java.awt.Color(255, 255, 255));
+        signUpBtn.setText("Sign up");
+        signUpBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        signUpBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                signUpBtnActionPerformed(evt);
+            }
+        });
+
+        signUpText.setText("Already have an account ?");
+        signUpText.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        loginBtn.setForeground(new java.awt.Color(102, 102, 255));
+        loginBtn.setText("Log in");
+        loginBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        loginBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                loginBtnMouseClicked(evt);
+            }
+        });
+
+        footerTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        footerTitle.setText("Connect With Us");
+
+        facebookIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/facebook.png"))); // NOI18N
+        facebookIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        twitterIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/twitter.png"))); // NOI18N
+        twitterIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        instagramIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/instagram.png"))); // NOI18N
+        instagramIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        youtubeIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/youtube.png"))); // NOI18N
+        youtubeIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        linkedinIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/linkedin.png"))); // NOI18N
+        linkedinIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        CopyrightText.setText("2023 Akbar Satrio Nugroho. All Rights Reserved. ");
+
+        CopyrightIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/copyright.png"))); // NOI18N
+        CopyrightIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(106, 106, 106)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(IconEmail)
+                                    .addComponent(IconUsername)
+                                    .addComponent(IconPassword))
+                                .addGap(26, 26, 26)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(userNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(emailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(passwordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(signUpBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(121, 121, 121)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(TitleLoginInterface1, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(TitleLoginInterface, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(14, 14, 14))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(220, 220, 220)
+                        .addComponent(signUpText)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(loginBtn))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(90, 90, 90)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(footerTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(facebookIcon)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(twitterIcon)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(instagramIcon)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(youtubeIcon)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(linkedinIcon))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(CopyrightIcon)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(CopyrightText)))))
+                .addContainerGap(92, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(TitleLoginInterface, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(TitleLoginInterface1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(userNameTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(IconUsername))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(IconEmail))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(emailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(IconPassword))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(passwordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addComponent(signUpBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(signUpText)
+                    .addComponent(loginBtn))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
+                .addComponent(footerTitle)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(facebookIcon)
+                    .addComponent(twitterIcon)
+                    .addComponent(instagramIcon)
+                    .addComponent(youtubeIcon)
+                    .addComponent(linkedinIcon))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(CopyrightIcon)
+                    .addComponent(CopyrightText))
+                .addGap(53, 53, 53))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void userNameTextFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_userNameTextFieldFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_userNameTextFieldFocusGained
+
+    private void userNameTextFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_userNameTextFieldFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_userNameTextFieldFocusLost
+
+    private void emailTextFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailTextFieldFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailTextFieldFocusGained
+
+    private void emailTextFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailTextFieldFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailTextFieldFocusLost
+
+    private void passwordTextFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordTextFieldFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passwordTextFieldFocusGained
+
+    private void passwordTextFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordTextFieldFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passwordTextFieldFocusLost
+
+    private void signUpBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signUpBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_signUpBtnActionPerformed
+
+    private void loginBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginBtnMouseClicked
+        // TODO add your handling code here:
+        Login gotoLogin = new Login();
+        gotoLogin.show();
+        
+        dispose();
+    }//GEN-LAST:event_loginBtnMouseClicked
 
     /**
      * @param args the command line arguments
@@ -78,5 +388,43 @@ public class Register extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel CopyrightIcon;
+    private javax.swing.JLabel CopyrightText;
+    private javax.swing.JLabel IconEmail;
+    private javax.swing.JLabel IconPassword;
+    private javax.swing.JLabel IconUsername;
+    private javax.swing.JLabel TitleLoginInterface;
+    private javax.swing.JLabel TitleLoginInterface1;
+    private javax.swing.JTextField emailTextField;
+    private javax.swing.JLabel facebookIcon;
+    private javax.swing.JLabel footerTitle;
+    private javax.swing.JLabel homeIcon;
+    private javax.swing.JLabel homeIcon1;
+    private javax.swing.JLabel homeIcon2;
+    private javax.swing.JLabel instagramIcon;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JLabel linkedinIcon;
+    private javax.swing.JLabel loginBtn;
+    private javax.swing.JTextField passwordTextField;
+    private javax.swing.JToggleButton signUpBtn;
+    private javax.swing.JLabel signUpText;
+    private javax.swing.JLabel twitterIcon;
+    private javax.swing.JTextField userNameTextField;
+    private javax.swing.JLabel welcomeTitle;
+    private javax.swing.JLabel welcomeTitle1;
+    private javax.swing.JLabel welcomeTitle2;
+    private javax.swing.JLabel youtubeIcon;
     // End of variables declaration//GEN-END:variables
 }
