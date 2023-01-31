@@ -273,8 +273,10 @@ public class Register extends javax.swing.JFrame {
                 .addComponent(TitleLoginInterface1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(usernameTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(IconUsername))
+                    .addComponent(IconUsername)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(usernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(11, 11, 11)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -362,7 +364,7 @@ public class Register extends javax.swing.JFrame {
             int pesan = JOptionPane.showOptionDialog(this, "This data will be use as your credential for login \nAre you sure about this data ?", "Sign up Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
             if (pesan == JOptionPane.YES_OPTION) {
                 con = databaseConnection.configDB();
-                String sql = "INSERT INTO user (Username, Email, Password) VALUES('"+usernameTextField.getText()+","+emailTextField.getText()+","+passwordTextField.getText()+"')";
+                String sql = "INSERT INTO user (Username, Email, Password) VALUES('"+usernameTextField.getText()+"','"+emailTextField.getText()+"','"+passwordTextField.getText()+"')";
                 st = con.createStatement();
                 st.execute(sql);
                 this.dispose();

@@ -341,7 +341,7 @@ public class Login extends javax.swing.JFrame {
 
     private void usernameTextFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_usernameTextFieldFocusGained
         // TODO add your handling code here:
-        if(usernameTextField.getText().equals("Username/Email")){
+        if(usernameTextField.getText().equals("Email")){
             usernameTextField.setText("");
             usernameTextField.setForeground(Color.black);
         }
@@ -350,7 +350,7 @@ public class Login extends javax.swing.JFrame {
     private void usernameTextFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_usernameTextFieldFocusLost
         // TODO add your handling code here:
         if(usernameTextField.getText().equals("")){
-            usernameTextField.setText("Username/Email");
+            usernameTextField.setText("Email");
             usernameTextField.setForeground(Color.gray);
         }
     }//GEN-LAST:event_usernameTextFieldFocusLost
@@ -382,7 +382,7 @@ public class Login extends javax.swing.JFrame {
         try{
             String password = new String(passwordTextField.getPassword());
             con = databaseConnection.configDB();
-            String sql = "SELECT * FROM user WHERE Email OR Username='" + usernameTextField.getText() + "' And Password='" + passwordTextField +"'";
+            String sql = "SELECT * FROM user WHERE Email='"+usernameTextField.getText()+"' And Password='"+password+"'";
             st = con.createStatement();
             ResultSet rs = st.executeQuery(sql);
             if (rs.next()){
