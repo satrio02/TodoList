@@ -4,11 +4,20 @@
  */
 package todolist;
 
+import java.awt.Color;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author rakit
  */
 public class Register extends javax.swing.JFrame {
+    Connection con;
+    Statement st;
+    ResultSet rs;
 
     /**
      * Creates new form Register
@@ -36,11 +45,10 @@ public class Register extends javax.swing.JFrame {
         TitleLoginInterface = new javax.swing.JLabel();
         TitleLoginInterface1 = new javax.swing.JLabel();
         IconUsername = new javax.swing.JLabel();
-        userNameTextField = new javax.swing.JTextField();
+        usernameTextField = new javax.swing.JTextField();
         IconEmail = new javax.swing.JLabel();
         emailTextField = new javax.swing.JTextField();
         IconPassword = new javax.swing.JLabel();
-        passwordTextField = new javax.swing.JTextField();
         signUpBtn = new javax.swing.JToggleButton();
         signUpText = new javax.swing.JLabel();
         loginBtn = new javax.swing.JLabel();
@@ -52,6 +60,7 @@ public class Register extends javax.swing.JFrame {
         linkedinIcon = new javax.swing.JLabel();
         CopyrightText = new javax.swing.JLabel();
         CopyrightIcon = new javax.swing.JLabel();
+        passwordTextField = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -124,12 +133,12 @@ public class Register extends javax.swing.JFrame {
 
         IconUsername.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/identity.png"))); // NOI18N
 
-        userNameTextField.addFocusListener(new java.awt.event.FocusAdapter() {
+        usernameTextField.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                userNameTextFieldFocusGained(evt);
+                usernameTextFieldFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                userNameTextFieldFocusLost(evt);
+                usernameTextFieldFocusLost(evt);
             }
         });
 
@@ -145,15 +154,6 @@ public class Register extends javax.swing.JFrame {
         });
 
         IconPassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/password.png"))); // NOI18N
-
-        passwordTextField.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                passwordTextFieldFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                passwordTextFieldFocusLost(evt);
-            }
-        });
 
         signUpBtn.setBackground(new java.awt.Color(0, 0, 0));
         signUpBtn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -201,6 +201,15 @@ public class Register extends javax.swing.JFrame {
         CopyrightIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/copyright.png"))); // NOI18N
         CopyrightIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        passwordTextField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                passwordTextFieldFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                passwordTextFieldFocusLost(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -217,10 +226,10 @@ public class Register extends javax.swing.JFrame {
                                     .addComponent(IconUsername)
                                     .addComponent(IconPassword))
                                 .addGap(26, 26, 26)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(userNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(emailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(passwordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(usernameTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 312, Short.MAX_VALUE)
+                                    .addComponent(emailTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 312, Short.MAX_VALUE)
+                                    .addComponent(passwordTextField)))
                             .addComponent(signUpBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(121, 121, 121)
@@ -264,7 +273,7 @@ public class Register extends javax.swing.JFrame {
                 .addComponent(TitleLoginInterface1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(userNameTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(usernameTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(IconUsername))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -273,12 +282,11 @@ public class Register extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(17, 17, 17)
                         .addComponent(emailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(IconPassword)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(IconPassword))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
+                        .addGap(9, 9, 9)
                         .addComponent(passwordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(signUpBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -316,32 +324,62 @@ public class Register extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void userNameTextFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_userNameTextFieldFocusGained
+    private void usernameTextFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_usernameTextFieldFocusGained
         // TODO add your handling code here:
-    }//GEN-LAST:event_userNameTextFieldFocusGained
+        if(usernameTextField.getText().equals("Username/Email")){
+            usernameTextField.setText("");
+            usernameTextField.setForeground(Color.black);
+        }
+    }//GEN-LAST:event_usernameTextFieldFocusGained
 
-    private void userNameTextFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_userNameTextFieldFocusLost
+    private void usernameTextFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_usernameTextFieldFocusLost
         // TODO add your handling code here:
-    }//GEN-LAST:event_userNameTextFieldFocusLost
+        if(usernameTextField.getText().equals("")){
+            usernameTextField.setText("Username/Email");
+            usernameTextField.setForeground(Color.gray);
+        }
+    }//GEN-LAST:event_usernameTextFieldFocusLost
 
     private void emailTextFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailTextFieldFocusGained
         // TODO add your handling code here:
+        if(emailTextField.getText().equals("Email")){
+            emailTextField.setText("");
+            emailTextField.setForeground(Color.black);
+        }
     }//GEN-LAST:event_emailTextFieldFocusGained
 
     private void emailTextFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailTextFieldFocusLost
         // TODO add your handling code here:
+        if(emailTextField.getText().equals("")){
+            emailTextField.setText("Email");
+            emailTextField.setForeground(Color.gray);
+        }
     }//GEN-LAST:event_emailTextFieldFocusLost
-
-    private void passwordTextFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordTextFieldFocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_passwordTextFieldFocusGained
-
-    private void passwordTextFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordTextFieldFocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_passwordTextFieldFocusLost
 
     private void signUpBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signUpBtnActionPerformed
         // TODO add your handling code here:
+        try {
+            int pesan = JOptionPane.showOptionDialog(this, "This data will be use as your credential for login \nAre you sure about this data ?", "Sign up Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
+            if (pesan == JOptionPane.YES_OPTION) {
+                con = databaseConnection.configDB();
+                String sql = "INSERT INTO user (Username, Email, Password) VALUES('"+usernameTextField.getText()+","+emailTextField.getText()+","+passwordTextField.getText()+"')";
+                st = con.createStatement();
+                st.execute(sql);
+                this.dispose();
+                
+                JOptionPane.showMessageDialog(null, "Congratulation, your registration has been successfull!");
+                usernameTextField.setText("");
+                emailTextField.setText("");
+                passwordTextField.setText("");
+                
+                Login gotoLogin = new Login();
+                gotoLogin.show();
+                
+                dispose();
+            }
+        }catch (Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
     }//GEN-LAST:event_signUpBtnActionPerformed
 
     private void loginBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginBtnMouseClicked
@@ -351,6 +389,24 @@ public class Register extends javax.swing.JFrame {
         
         dispose();
     }//GEN-LAST:event_loginBtnMouseClicked
+
+    private void passwordTextFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordTextFieldFocusGained
+        // TODO add your handling code here:
+        if(passwordTextField.getText().equals("Password")){
+            passwordTextField.setText("");
+            passwordTextField.setForeground(Color.black);
+            passwordTextField.setEchoChar('\u25cf');
+        }
+    }//GEN-LAST:event_passwordTextFieldFocusGained
+
+    private void passwordTextFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordTextFieldFocusLost
+        // TODO add your handling code here:
+        if(passwordTextField.getText().equals("")){
+            passwordTextField.setText("Password");
+            passwordTextField.setForeground(Color.gray);
+            passwordTextField.setEchoChar('\u0000');
+        }
+    }//GEN-LAST:event_passwordTextFieldFocusLost
 
     /**
      * @param args the command line arguments
@@ -398,32 +454,20 @@ public class Register extends javax.swing.JFrame {
     private javax.swing.JTextField emailTextField;
     private javax.swing.JLabel facebookIcon;
     private javax.swing.JLabel footerTitle;
-    private javax.swing.JLabel homeIcon;
-    private javax.swing.JLabel homeIcon1;
     private javax.swing.JLabel homeIcon2;
     private javax.swing.JLabel instagramIcon;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JLabel linkedinIcon;
     private javax.swing.JLabel loginBtn;
-    private javax.swing.JTextField passwordTextField;
+    private javax.swing.JPasswordField passwordTextField;
     private javax.swing.JToggleButton signUpBtn;
     private javax.swing.JLabel signUpText;
     private javax.swing.JLabel twitterIcon;
-    private javax.swing.JTextField userNameTextField;
-    private javax.swing.JLabel welcomeTitle;
-    private javax.swing.JLabel welcomeTitle1;
+    private javax.swing.JTextField usernameTextField;
     private javax.swing.JLabel welcomeTitle2;
     private javax.swing.JLabel youtubeIcon;
     // End of variables declaration//GEN-END:variables

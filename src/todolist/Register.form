@@ -56,10 +56,10 @@
                                       <Component id="IconPassword" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="userNameTextField" min="-2" pref="312" max="-2" attributes="0"/>
-                                      <Component id="emailTextField" min="-2" pref="312" max="-2" attributes="0"/>
-                                      <Component id="passwordTextField" min="-2" pref="312" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="usernameTextField" pref="312" max="32767" attributes="0"/>
+                                      <Component id="emailTextField" pref="312" max="32767" attributes="0"/>
+                                      <Component id="passwordTextField" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Component id="signUpBtn" alignment="0" min="-2" pref="402" max="-2" attributes="0"/>
@@ -118,7 +118,7 @@
                   <Component id="TitleLoginInterface1" min="-2" pref="47" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="userNameTextField" alignment="1" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="usernameTextField" alignment="1" min="-2" pref="39" max="-2" attributes="0"/>
                       <Component id="IconUsername" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -131,13 +131,11 @@
                           <Component id="emailTextField" min="-2" pref="39" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="IconPassword" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="IconPassword" min="-2" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                           <Component id="passwordTextField" min="-2" pref="39" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -305,10 +303,10 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="userNameTextField">
+        <Component class="javax.swing.JTextField" name="usernameTextField">
           <Events>
-            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="userNameTextFieldFocusGained"/>
-            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="userNameTextFieldFocusLost"/>
+            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="usernameTextFieldFocusGained"/>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="usernameTextFieldFocusLost"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="IconEmail">
@@ -330,12 +328,6 @@
               <Image iconType="3" name="/icons/password.png"/>
             </Property>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="passwordTextField">
-          <Events>
-            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="passwordTextFieldFocusGained"/>
-            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="passwordTextFieldFocusLost"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JToggleButton" name="signUpBtn">
           <Properties>
@@ -453,6 +445,12 @@
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JPasswordField" name="passwordTextField">
+          <Events>
+            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="passwordTextFieldFocusGained"/>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="passwordTextFieldFocusLost"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
