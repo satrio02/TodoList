@@ -401,6 +401,9 @@
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="signUpBtnMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="facebookIcon">
           <Properties>
@@ -411,6 +414,9 @@
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="facebookIconMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="twitterIcon">
           <Properties>
@@ -421,6 +427,9 @@
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="twitterIconMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="instagramIcon">
           <Properties>
@@ -431,6 +440,9 @@
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="instagramIconMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="youtubeIcon">
           <Properties>
@@ -441,6 +453,9 @@
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="youtubeIconMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="linkedinIcon">
           <Properties>
@@ -451,6 +466,9 @@
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="linkedinIconMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="CopyrightIcon">
           <Properties>
