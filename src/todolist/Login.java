@@ -192,6 +192,11 @@ public class Login extends javax.swing.JFrame {
         signUpBtn.setForeground(new java.awt.Color(102, 102, 255));
         signUpBtn.setText("Sign up");
         signUpBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        signUpBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                signUpBtnMouseClicked(evt);
+            }
+        });
 
         facebookIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/facebook.png"))); // NOI18N
         facebookIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -399,6 +404,14 @@ public class Login extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, ex.getMessage());
         }
     }//GEN-LAST:event_loginBtnActionPerformed
+
+    private void signUpBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUpBtnMouseClicked
+        // TODO add your handling code here:
+        Register gotoRegister = new Register();
+        gotoRegister.show();
+        
+        dispose();
+    }//GEN-LAST:event_signUpBtnMouseClicked
 
     /**
      * @param args the command line arguments
