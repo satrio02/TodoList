@@ -36,14 +36,22 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8d8652e82b8da2286c32a096f1ff152e693adad4
         welcomeTitle = new javax.swing.JLabel();
         titleDashboard = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableTaskDashboard = new javax.swing.JTable();
         addTaskBtn = new javax.swing.JButton();
         deleteTaskBtn = new javax.swing.JButton();
+<<<<<<< HEAD
 >>>>>>> e039e2aba155a739db4c05f7f03be7070f16b4e0
+=======
+=======
+>>>>>>> 5572463377d8ed3560662a970d58c4cbc8cf494b
+>>>>>>> 8d8652e82b8da2286c32a096f1ff152e693adad4
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,17 +75,26 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel5.setText("List");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8d8652e82b8da2286c32a096f1ff152e693adad4
         welcomeTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         welcomeTitle.setForeground(new java.awt.Color(255, 255, 255));
         welcomeTitle.setText("Welcome!");
 
+<<<<<<< HEAD
 >>>>>>> e039e2aba155a739db4c05f7f03be7070f16b4e0
+=======
+=======
+>>>>>>> 5572463377d8ed3560662a970d58c4cbc8cf494b
+>>>>>>> 8d8652e82b8da2286c32a096f1ff152e693adad4
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+<<<<<<< HEAD
 <<<<<<< HEAD
                 .addGap(45, 45, 45)
                 .addComponent(homeIcon)
@@ -88,6 +105,8 @@ public class Dashboard extends javax.swing.JFrame {
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(732, Short.MAX_VALUE))
 =======
+=======
+>>>>>>> 8d8652e82b8da2286c32a096f1ff152e693adad4
                 .addGap(38, 38, 38)
                 .addComponent(homeIcon)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -102,20 +121,41 @@ public class Dashboard extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(welcomeTitle)
                         .addGap(72, 72, 72))))
+<<<<<<< HEAD
 >>>>>>> e039e2aba155a739db4c05f7f03be7070f16b4e0
+=======
+=======
+                .addGap(45, 45, 45)
+                .addComponent(homeIcon)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(732, Short.MAX_VALUE))
+>>>>>>> 5572463377d8ed3560662a970d58c4cbc8cf494b
+>>>>>>> 8d8652e82b8da2286c32a096f1ff152e693adad4
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
 <<<<<<< HEAD
+<<<<<<< HEAD
                 .addGap(27, 27, 27)
 =======
                 .addGap(26, 26, 26)
 >>>>>>> e039e2aba155a739db4c05f7f03be7070f16b4e0
+=======
+                .addGap(26, 26, 26)
+=======
+                .addGap(27, 27, 27)
+>>>>>>> 5572463377d8ed3560662a970d58c4cbc8cf494b
+>>>>>>> 8d8652e82b8da2286c32a096f1ff152e693adad4
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+<<<<<<< HEAD
 <<<<<<< HEAD
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -125,6 +165,8 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
 =======
+=======
+>>>>>>> 8d8652e82b8da2286c32a096f1ff152e693adad4
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel4)
@@ -182,14 +224,29 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
 
+<<<<<<< HEAD
 >>>>>>> e039e2aba155a739db4c05f7f03be7070f16b4e0
+=======
+=======
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel5))
+                    .addComponent(homeIcon))
+                .addContainerGap(29, Short.MAX_VALUE))
+        );
+
+>>>>>>> 5572463377d8ed3560662a970d58c4cbc8cf494b
+>>>>>>> 8d8652e82b8da2286c32a096f1ff152e693adad4
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8d8652e82b8da2286c32a096f1ff152e693adad4
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(42, 42, 42)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -203,15 +260,23 @@ public class Dashboard extends javax.swing.JFrame {
                             .addComponent(deleteTaskBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
                             .addComponent(addTaskBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(64, 64, 64))))
+<<<<<<< HEAD
 >>>>>>> e039e2aba155a739db4c05f7f03be7070f16b4e0
+=======
+=======
+>>>>>>> 5572463377d8ed3560662a970d58c4cbc8cf494b
+>>>>>>> 8d8652e82b8da2286c32a096f1ff152e693adad4
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
 <<<<<<< HEAD
+<<<<<<< HEAD
                 .addGap(0, 480, Short.MAX_VALUE))
 =======
+=======
+>>>>>>> 8d8652e82b8da2286c32a096f1ff152e693adad4
                 .addGap(18, 18, 18)
                 .addComponent(titleDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -222,7 +287,13 @@ public class Dashboard extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(deleteTaskBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(39, Short.MAX_VALUE))
+<<<<<<< HEAD
 >>>>>>> e039e2aba155a739db4c05f7f03be7070f16b4e0
+=======
+=======
+                .addGap(0, 480, Short.MAX_VALUE))
+>>>>>>> 5572463377d8ed3560662a970d58c4cbc8cf494b
+>>>>>>> 8d8652e82b8da2286c32a096f1ff152e693adad4
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -234,10 +305,17 @@ public class Dashboard extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
 <<<<<<< HEAD
+<<<<<<< HEAD
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 =======
             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
 >>>>>>> e039e2aba155a739db4c05f7f03be7070f16b4e0
+=======
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+=======
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+>>>>>>> 5572463377d8ed3560662a970d58c4cbc8cf494b
+>>>>>>> 8d8652e82b8da2286c32a096f1ff152e693adad4
         );
 
         pack();
@@ -298,10 +376,17 @@ public class Dashboard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     private javax.swing.JButton addTaskBtn;
     private javax.swing.JButton deleteTaskBtn;
 >>>>>>> e039e2aba155a739db4c05f7f03be7070f16b4e0
+=======
+    private javax.swing.JButton addTaskBtn;
+    private javax.swing.JButton deleteTaskBtn;
+=======
+>>>>>>> 5572463377d8ed3560662a970d58c4cbc8cf494b
+>>>>>>> 8d8652e82b8da2286c32a096f1ff152e693adad4
     private javax.swing.JLabel homeIcon;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -309,11 +394,19 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8d8652e82b8da2286c32a096f1ff152e693adad4
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tableTaskDashboard;
     private javax.swing.JLabel titleDashboard;
     private javax.swing.JLabel welcomeTitle;
+<<<<<<< HEAD
 >>>>>>> e039e2aba155a739db4c05f7f03be7070f16b4e0
+=======
+=======
+>>>>>>> 5572463377d8ed3560662a970d58c4cbc8cf494b
+>>>>>>> 8d8652e82b8da2286c32a096f1ff152e693adad4
     // End of variables declaration//GEN-END:variables
 }
