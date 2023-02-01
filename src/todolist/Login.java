@@ -5,12 +5,21 @@
 package todolist;
 
 import java.awt.Color;
+import java.awt.Desktop;
+import java.net.URI;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author rakit
  */
 public class Login extends javax.swing.JFrame {
+    Connection con;
+    Statement st;
 
     /**
      * Creates new form Login
@@ -37,7 +46,7 @@ public class Login extends javax.swing.JFrame {
         welcomeTitle = new javax.swing.JLabel();
         TitleLoginInterface = new javax.swing.JLabel();
         IconUsername = new javax.swing.JLabel();
-        loginTextField = new javax.swing.JTextField();
+        usernameTextField = new javax.swing.JTextField();
         IconPassword = new javax.swing.JLabel();
         passwordTextField = new javax.swing.JPasswordField();
         loginBtn = new javax.swing.JToggleButton();
@@ -124,17 +133,17 @@ public class Login extends javax.swing.JFrame {
 
         IconUsername.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/identity.png"))); // NOI18N
 
-        loginTextField.addFocusListener(new java.awt.event.FocusAdapter() {
+        usernameTextField.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                loginTextFieldFocusGained(evt);
+                usernameTextFieldFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                loginTextFieldFocusLost(evt);
+                usernameTextFieldFocusLost(evt);
             }
         });
-        loginTextField.addActionListener(new java.awt.event.ActionListener() {
+        usernameTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginTextFieldActionPerformed(evt);
+                usernameTextFieldActionPerformed(evt);
             }
         });
 
@@ -185,21 +194,51 @@ public class Login extends javax.swing.JFrame {
         signUpBtn.setForeground(new java.awt.Color(102, 102, 255));
         signUpBtn.setText("Sign up");
         signUpBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        signUpBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                signUpBtnMouseClicked(evt);
+            }
+        });
 
         facebookIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/facebook.png"))); // NOI18N
         facebookIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        facebookIcon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                facebookIconMouseClicked(evt);
+            }
+        });
 
         twitterIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/twitter.png"))); // NOI18N
         twitterIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        twitterIcon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                twitterIconMouseClicked(evt);
+            }
+        });
 
         instagramIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/instagram.png"))); // NOI18N
         instagramIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        instagramIcon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                instagramIconMouseClicked(evt);
+            }
+        });
 
         youtubeIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/youtube.png"))); // NOI18N
         youtubeIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        youtubeIcon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                youtubeIconMouseClicked(evt);
+            }
+        });
 
         linkedinIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/linkedin.png"))); // NOI18N
         linkedinIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        linkedinIcon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                linkedinIconMouseClicked(evt);
+            }
+        });
 
         CopyrightIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/copyright.png"))); // NOI18N
         CopyrightIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -224,7 +263,7 @@ public class Login extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(IconUsername)
                                     .addGap(18, 18, 18)
-                                    .addComponent(loginTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(usernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(IconPassword)
                                     .addGap(18, 18, 18)
@@ -275,7 +314,7 @@ public class Login extends javax.swing.JFrame {
                         .addComponent(IconUsername))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(49, 49, 49)
-                        .addComponent(loginTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(usernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(29, 29, 29)
@@ -328,26 +367,25 @@ public class Login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void loginTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginTextFieldActionPerformed
+    private void usernameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_loginTextFieldActionPerformed
+    }//GEN-LAST:event_usernameTextFieldActionPerformed
 
-    private void loginTextFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_loginTextFieldFocusGained
+    private void usernameTextFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_usernameTextFieldFocusGained
         // TODO add your handling code here:
-        if(loginTextField.getText().equals("Username/Email")){
-            loginTextField.setText("");
-            loginTextField.setForeground(Color.black);
+        if(usernameTextField.getText().equals("Email")){
+            usernameTextField.setText("");
+            usernameTextField.setForeground(Color.black);
         }
-    }//GEN-LAST:event_loginTextFieldFocusGained
+    }//GEN-LAST:event_usernameTextFieldFocusGained
 
-    private void loginTextFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_loginTextFieldFocusLost
+    private void usernameTextFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_usernameTextFieldFocusLost
         // TODO add your handling code here:
-        if(loginTextField.getText().equals("")){
-            loginTextField.setText("Username/Email");
-            loginTextField.setForeground(Color.gray);
-            
+        if(usernameTextField.getText().equals("")){
+            usernameTextField.setText("Email");
+            usernameTextField.setForeground(Color.gray);
         }
-    }//GEN-LAST:event_loginTextFieldFocusLost
+    }//GEN-LAST:event_usernameTextFieldFocusLost
 
     private void passwordTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordTextFieldActionPerformed
         // TODO add your handling code here:
@@ -373,7 +411,84 @@ public class Login extends javax.swing.JFrame {
 
     private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
         // TODO add your handling code here:
+        try{
+            String password = new String(passwordTextField.getPassword());
+            con = databaseConnection.configDB();
+            String sql = "SELECT * FROM user WHERE Email='"+usernameTextField.getText()+"' And Password='"+password+"'";
+            st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            if (rs.next()){
+                if(usernameTextField.getText().equals(rs.getString("Email")) && password.equals(rs.getString("Password"))){
+                    Dashboard gotoDashboard = new Dashboard();
+                    gotoDashboard.show();
+                    
+                    dispose();
+                }
+            }else{
+                JOptionPane.showMessageDialog(null, "Incorrect Username or Password");
+            }
+        }catch(SQLException ex) {
+            JOptionPane.showMessageDialog(this, ex.getMessage());
+        }
     }//GEN-LAST:event_loginBtnActionPerformed
+
+    private void facebookIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_facebookIconMouseClicked
+        // TODO add your handling code here:
+        try {
+            Desktop openingBrowser = Desktop.getDesktop();
+            openingBrowser.browse(new URI("https://www.facebook.com/"));
+        }catch (Exception e) {
+            System.out.println("Something went wrong.");
+        }
+    }//GEN-LAST:event_facebookIconMouseClicked
+
+    private void twitterIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_twitterIconMouseClicked
+        // TODO add your handling code here:
+        try {
+            Desktop openingBrowser = Desktop.getDesktop();
+            openingBrowser.browse(new URI("https://www.twitter.com/"));
+        }catch (Exception e) {
+            System.out.println("Something went wrong.");
+        }
+    }//GEN-LAST:event_twitterIconMouseClicked
+
+    private void instagramIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_instagramIconMouseClicked
+        // TODO add your handling code here:
+        try {
+            Desktop openingBrowser = Desktop.getDesktop();
+            openingBrowser.browse(new URI("https://www.instagram.com/"));
+        }catch (Exception e) {
+            System.out.println("Something went wrong.");
+        }
+    }//GEN-LAST:event_instagramIconMouseClicked
+
+    private void youtubeIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_youtubeIconMouseClicked
+        // TODO add your handling code here:
+        try {
+            Desktop openingBrowser = Desktop.getDesktop();
+            openingBrowser.browse(new URI("https://www.youtube.com/"));
+        }catch (Exception e) {
+            System.out.println("Something went wrong.");
+        }
+    }//GEN-LAST:event_youtubeIconMouseClicked
+
+    private void linkedinIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_linkedinIconMouseClicked
+        // TODO add your handling code here:
+        try {
+            Desktop openingBrowser = Desktop.getDesktop();
+            openingBrowser.browse(new URI("https://www.linkedin.com/"));
+        }catch (Exception e) {
+            System.out.println("Something went wrong.");
+        }
+    }//GEN-LAST:event_linkedinIconMouseClicked
+
+    private void signUpBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUpBtnMouseClicked
+        // TODO add your handling code here:
+        Register gotoRegister = new Register();
+        gotoRegister.show();
+        
+        dispose();
+    }//GEN-LAST:event_signUpBtnMouseClicked
 
     /**
      * @param args the command line arguments
@@ -431,11 +546,11 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel linkedinIcon;
     private javax.swing.JToggleButton loginBtn;
-    private javax.swing.JTextField loginTextField;
     private javax.swing.JPasswordField passwordTextField;
     private javax.swing.JLabel signUpBtn;
     private javax.swing.JLabel signUpText;
     private javax.swing.JLabel twitterIcon;
+    private javax.swing.JTextField usernameTextField;
     private javax.swing.JLabel welcomeTitle;
     private javax.swing.JLabel youtubeIcon;
     // End of variables declaration//GEN-END:variables
