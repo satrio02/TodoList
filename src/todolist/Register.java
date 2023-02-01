@@ -5,6 +5,8 @@
 package todolist;
 
 import java.awt.Color;
+import java.awt.Desktop;
+import java.net.URI;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -183,18 +185,43 @@ public class Register extends javax.swing.JFrame {
 
         facebookIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/facebook.png"))); // NOI18N
         facebookIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        facebookIcon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                facebookIconMouseClicked(evt);
+            }
+        });
 
         twitterIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/twitter.png"))); // NOI18N
         twitterIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        twitterIcon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                twitterIconMouseClicked(evt);
+            }
+        });
 
         instagramIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/instagram.png"))); // NOI18N
         instagramIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        instagramIcon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                instagramIconMouseClicked(evt);
+            }
+        });
 
         youtubeIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/youtube.png"))); // NOI18N
         youtubeIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        youtubeIcon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                youtubeIconMouseClicked(evt);
+            }
+        });
 
         linkedinIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/linkedin.png"))); // NOI18N
         linkedinIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        linkedinIcon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                linkedinIconMouseClicked(evt);
+            }
+        });
 
         CopyrightText.setText("2023 Akbar Satrio Nugroho. All Rights Reserved. ");
 
@@ -278,9 +305,7 @@ public class Register extends javax.swing.JFrame {
                         .addComponent(usernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(11, 11, 11)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(IconEmail))
+                    .addComponent(IconEmail)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(17, 17, 17)
                         .addComponent(emailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -409,6 +434,56 @@ public class Register extends javax.swing.JFrame {
             passwordTextField.setEchoChar('\u0000');
         }
     }//GEN-LAST:event_passwordTextFieldFocusLost
+
+    private void facebookIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_facebookIconMouseClicked
+        // TODO add your handling code here:
+        try {
+            Desktop openingBrowser = Desktop.getDesktop();
+            openingBrowser.browse(new URI("https://www.facebook.com/"));
+        }catch (Exception e) {
+            System.out.println("Something went wrong.");
+        }
+    }//GEN-LAST:event_facebookIconMouseClicked
+
+    private void twitterIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_twitterIconMouseClicked
+        // TODO add your handling code here:
+        try {
+            Desktop openingBrowser = Desktop.getDesktop();
+            openingBrowser.browse(new URI("https://www.twitter.com/"));
+        }catch (Exception e) {
+            System.out.println("Something went wrong.");
+        }
+    }//GEN-LAST:event_twitterIconMouseClicked
+
+    private void instagramIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_instagramIconMouseClicked
+        // TODO add your handling code here:
+        try {
+            Desktop openingBrowser = Desktop.getDesktop();
+            openingBrowser.browse(new URI("https://www.instagram.com/"));
+        }catch (Exception e) {
+            System.out.println("Something went wrong.");
+        }
+    }//GEN-LAST:event_instagramIconMouseClicked
+
+    private void youtubeIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_youtubeIconMouseClicked
+        // TODO add your handling code here:
+        try {
+            Desktop openingBrowser = Desktop.getDesktop();
+            openingBrowser.browse(new URI("https://www.youtube.com/"));
+        }catch (Exception e) {
+            System.out.println("Something went wrong.");
+        }
+    }//GEN-LAST:event_youtubeIconMouseClicked
+
+    private void linkedinIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_linkedinIconMouseClicked
+        // TODO add your handling code here:
+        try {
+            Desktop openingBrowser = Desktop.getDesktop();
+            openingBrowser.browse(new URI("https://www.linkedin.com/"));
+        }catch (Exception e) {
+            System.out.println("Something went wrong.");
+        }
+    }//GEN-LAST:event_linkedinIconMouseClicked
 
     /**
      * @param args the command line arguments
