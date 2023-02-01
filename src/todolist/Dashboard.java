@@ -4,6 +4,9 @@
  */
 package todolist;
 
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author rakit
@@ -143,6 +146,11 @@ public class Dashboard extends javax.swing.JFrame {
         deleteTaskBtn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         deleteTaskBtn.setForeground(new java.awt.Color(255, 255, 255));
         deleteTaskBtn.setText("Delete Task");
+        deleteTaskBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteTaskBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -195,8 +203,21 @@ public class Dashboard extends javax.swing.JFrame {
 
     private void addTaskBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addTaskBtnActionPerformed
         // TODO add your handling code here:
-        
+        DefaultTableModel tableTask = (DefaultTableModel) tableTaskDashboard.getModel();
+        tableTask.addRow(new Object[]{false, "", "", ""});
     }//GEN-LAST:event_addTaskBtnActionPerformed
+
+    private void deleteTaskBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteTaskBtnActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel tableTask = (DefaultTableModel) tableTaskDashboard.getModel();
+        if (tableTaskDashboard.getSelectedRow() == -1) {
+            if (tableTaskDashboard.getRowCount() == 0) {
+                JOptionPane.showMessageDialog(null, "Please choose task first!");
+            }
+        }
+        
+        ((DefaultTableModel) tableTaskDashboard.getModel()).setRowCount(0);
+    }//GEN-LAST:event_deleteTaskBtnActionPerformed
 
     /**
      * @param args the command line arguments
