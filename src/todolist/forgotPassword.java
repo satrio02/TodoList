@@ -52,6 +52,7 @@ public class forgotPassword extends javax.swing.JFrame {
         CopyrightText = new javax.swing.JLabel();
         CopyrightIcon = new javax.swing.JLabel();
         usernameTextField = new javax.swing.JTextField();
+        forgotUsername2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -201,6 +202,15 @@ public class forgotPassword extends javax.swing.JFrame {
             }
         });
 
+        forgotUsername2.setForeground(new java.awt.Color(102, 102, 255));
+        forgotUsername2.setText("I Have My Password Back ");
+        forgotUsername2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        forgotUsername2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                forgotUsername2MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -209,7 +219,6 @@ public class forgotPassword extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(92, 92, 92)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(submit, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -243,7 +252,12 @@ public class forgotPassword extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addComponent(IconUsername)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(usernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(forgotUsername2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(submit, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(usernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(99, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -265,7 +279,9 @@ public class forgotPassword extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(usernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(26, 26, 26)))
-                .addComponent(submit, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(submit, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(forgotUsername2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
                 .addComponent(footerTitle)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -370,6 +386,14 @@ public class forgotPassword extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_usernameTextFieldActionPerformed
 
+    private void forgotUsername2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_forgotUsername2MouseClicked
+        // TODO add your handling code here:
+        Login gotoLogin = new Login();
+        gotoLogin.show();
+        
+        dispose();
+    }//GEN-LAST:event_forgotUsername2MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -411,6 +435,9 @@ public class forgotPassword extends javax.swing.JFrame {
     private javax.swing.JLabel IconUsername;
     private javax.swing.JLabel facebookIcon;
     private javax.swing.JLabel footerTitle;
+    private javax.swing.JLabel forgotUsername;
+    private javax.swing.JLabel forgotUsername1;
+    private javax.swing.JLabel forgotUsername2;
     private javax.swing.JLabel homeIcon;
     private javax.swing.JLabel instagramIcon;
     private javax.swing.JLabel jLabel1;
