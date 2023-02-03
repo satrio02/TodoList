@@ -121,22 +121,18 @@ public class Dashboard extends javax.swing.JFrame {
             Class[] types = new Class [] {
                 java.lang.Boolean.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false
-            };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
             }
         });
         jScrollPane1.setViewportView(tableTask);
         if (tableTask.getColumnModel().getColumnCount() > 0) {
             tableTask.getColumnModel().getColumn(0).setResizable(false);
             tableTask.getColumnModel().getColumn(0).setPreferredWidth(20);
+            tableTask.getColumnModel().getColumn(1).setResizable(false);
+            tableTask.getColumnModel().getColumn(2).setResizable(false);
+            tableTask.getColumnModel().getColumn(3).setResizable(false);
         }
 
         addTaskBtn.setBackground(new java.awt.Color(0, 0, 0));
