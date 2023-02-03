@@ -121,9 +121,16 @@ public class Dashboard extends javax.swing.JFrame {
             Class[] types = new Class [] {
                 java.lang.Boolean.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
+            boolean[] canEdit = new boolean [] {
+                true, false, false, false
+            };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
             }
         });
         jScrollPane1.setViewportView(tableTask);
@@ -200,12 +207,13 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void addTaskBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addTaskBtnActionPerformed
         // TODO add your handling code here:
-        DefaultTableModel TableModel = (DefaultTableModel) tableTask.getModel();
-        TableModel.addRow(new Object[]{false, "", "", ""});
+        TaskForm gotoTaskForm = new TaskForm();
+        gotoTaskForm.show();
     }//GEN-LAST:event_addTaskBtnActionPerformed
 
     private void deletTaskBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deletTaskBtnActionPerformed
