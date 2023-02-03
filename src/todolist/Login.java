@@ -183,10 +183,20 @@ public class Login extends javax.swing.JFrame {
         forgotUsername.setForeground(new java.awt.Color(102, 102, 255));
         forgotUsername.setText("Forgot Username / Email");
         forgotUsername.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        forgotUsername.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                forgotUsernameMouseClicked(evt);
+            }
+        });
 
         forgotUsername1.setForeground(new java.awt.Color(102, 102, 255));
         forgotUsername1.setText("Forgot Password");
         forgotUsername1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        forgotUsername1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                forgotUsername1MouseClicked(evt);
+            }
+        });
 
         signUpText.setText("Don't have an account ?");
         signUpText.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -490,6 +500,22 @@ public class Login extends javax.swing.JFrame {
         
         dispose();
     }//GEN-LAST:event_signUpBtnMouseClicked
+
+    private void forgotUsernameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_forgotUsernameMouseClicked
+        // TODO add your handling code here:
+        forgotEmail gotoForgotEmail = new forgotEmail();
+        gotoForgotEmail.show();
+        
+        dispose();
+    }//GEN-LAST:event_forgotUsernameMouseClicked
+
+    private void forgotUsername1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_forgotUsername1MouseClicked
+        // TODO add your handling code here:
+        forgotPassword gotoForgotPassword = new forgotPassword();
+        gotoForgotPassword.show();
+        
+        dispose();
+    }//GEN-LAST:event_forgotUsername1MouseClicked
 
     /**
      * @param args the command line arguments
