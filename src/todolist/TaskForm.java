@@ -258,7 +258,7 @@ public class TaskForm extends javax.swing.JFrame {
         // TODO add your handling code here:
         try{
             con = databaseConnection.configDB();
-            String sql = "INSERT INTO task (userID, Task_Name, Subject_Name, Deadline) VALUES('"+null+"','"+taskTextField.getText()+"','"+subjectTextField.getText()+"','"+deadlineTextField.getText()+"')";
+            String sql = "INSERT INTO task (Task_Name, Subject_Name, Deadline) VALUES('"+taskTextField.getText()+"','"+subjectTextField.getText()+"','"+deadlineTextField.getText()+"')";
             st = con.createStatement();
             st.execute(sql);
             
@@ -266,6 +266,7 @@ public class TaskForm extends javax.swing.JFrame {
             taskTextField.setText("");
             subjectTextField.setText("");
             deadlineTextField.setText("");
+            
         }catch(Exception ex) {
             JOptionPane.showMessageDialog(this, ex.getMessage());
         }
